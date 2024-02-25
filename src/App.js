@@ -2,14 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
 import apiStore from "./Store/ApiStore.tsx"
+import CurrentWeather from './components/CurrentWeater/CurrentWeather.tsx';
 
 function App() {
-  useEffect(()=>{
-    apiStore.getCurrentWeather()
-  },[])
+  // useEffect(()=>{
+  //   apiStore.getCurrentWeather()
+  // },[])
   return (
     <div className="App">
-      <header className="App-header">
+      <CurrentWeather/>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -22,7 +24,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
