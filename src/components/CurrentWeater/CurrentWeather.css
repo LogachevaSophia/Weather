@@ -3,7 +3,8 @@
     width: min-content;
     border-radius: 20px;
     padding: 20px 50px;
-    min-width: 500px;
+    width: 500px;
+    overflow: hidden;
 
 }
 .form > label{
@@ -12,7 +13,8 @@
     display: block;
 }
 .form .degree{
-    font-size: 2rem
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 .form .icons{
     display: flex;
@@ -22,4 +24,16 @@
 }
 .form .icons > img{
    max-width: 100px
+}
+.form .slider{
+    display:  flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 31px 0;
+    padding: 10px;
+}
+.form .slider .icons .text{
+    min-height: 33%;
 }

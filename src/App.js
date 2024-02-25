@@ -3,6 +3,7 @@ import './App.css';
 import { useEffect } from 'react';
 import apiStore from "./Store/ApiStore.tsx"
 import CurrentWeather from './components/CurrentWeater/CurrentWeather.tsx';
+import CurrentThree from './components/CurrentWeatherThreeJs/CurrentWeatherThreeJs.tsx';
 
 function App() {
   // useEffect(()=>{
@@ -11,20 +12,7 @@ function App() {
   return (
     <div className="App">
       <CurrentWeather/>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <CurrentThree/>
     </div>
   );
 }
