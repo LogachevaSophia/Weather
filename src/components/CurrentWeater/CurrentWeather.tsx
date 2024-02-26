@@ -1,7 +1,8 @@
 import { observer } from "mobx-react-lite";
 import React, { useEffect } from "react";
 import "./CurrentWeather.css"
-import { currentWeatherStore } from "../CurrentWeater/CurrentWeatherStore.tsx";
+// import { currentWeatherStore } from "../../../CurrentWeater/CurrentWeatherStore.tsx";
+import { currentWeatherStore } from "../../Store/CurrentWeatherStore.tsx";
 import moment from "moment";
 
 
@@ -11,13 +12,10 @@ const CurrentWeather = observer((props) => {
         currentWeatherStore.getCurrentWeather()
         currentWeatherStore.getForecastWeather()
     }, [])
-    useEffect(() => {
-        console.log(currentWeatherStore?.forecast)
-        // apiStore.getCurrentWeather()
-    }, [currentWeatherStore?.forecast])
     return (
 
         <div className="container">
+            <a href="/cube">Посмотреть на погоду в кубе</a>
             <div className="header">
                 <div className="degree textAlignLeft">
                     <span className="bigfont">{currentWeatherStore.temp_c}°C</span>
@@ -60,7 +58,6 @@ const CurrentWeather = observer((props) => {
 
                 <div className="forecast">
                     {currentWeatherStore.forecast?.map((el, ind) => {
-                        console.log(el)
                         return (
                             <div className="row" key={ind}>
                                 <span>{el?.date}</span>

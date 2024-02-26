@@ -7,6 +7,16 @@
 .opacitycolor{
     color: rgba(255, 255, 255, 0.7)
 }
+a{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(240, 255, 255, 0.8);
+    padding: 10px 10px;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    right: 0
+}
 
 .container .header{
   display: grid;

@@ -1,8 +1,8 @@
-import { Canvas } from "@react-three/fiber"
-import React, { useEffect, useRef, useState } from "react";
+
+import React, { useEffect, useRef } from "react";
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { CurrentWeatherStore, currentWeatherStore } from "../CurrentWeater/CurrentWeatherStore.tsx";
+import {  currentWeatherStore } from "../../Store/CurrentWeatherStore.tsx";
 import { observer } from "mobx-react-lite";
 
 const CurrentThree = observer((props) => {

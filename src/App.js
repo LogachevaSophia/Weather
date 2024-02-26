@@ -1,10 +1,10 @@
 
 import './App.css';
 
-import CurrentThree from './components/CurrentWeatherThreeJs/CurrentWeatherThreeNew.tsx';
+import CurrentThree from './components/CurrentWeatherThreeJs/CurrentWeatherThree.tsx';
 
 import { Routes, Route} from 'react-router-dom';
-import CurrentWeather from './components/CurrentWeater/CurrentWeatherNew.tsx';
+import CurrentWeather from './components/CurrentWeater/CurrentWeather.tsx';
 
 function App() {
   return (

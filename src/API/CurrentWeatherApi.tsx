@@ -1,4 +1,4 @@
-import axios from "../../API/api.tsx"
+import axios from "../API/api.tsx"
 
 export default{
     getCurrentWeather () {

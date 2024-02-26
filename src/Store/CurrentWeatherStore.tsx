@@ -1,5 +1,5 @@
 import { makeAutoObservable, runInAction } from "mobx"
-import API from "./CurrentWeatherApi.tsx"
+import API from "../API/CurrentWeatherApi.tsx"
 import moment from"moment";
 
 
@@ -65,14 +65,6 @@ export class CurrentWeatherStore {
                     
 
                 }
-                console.log("я закончил")
-                console.log(this.forecast)
-                // Object.keys(response?.data?.forecast).forEach((key) => {
-                //     // if (this.hasOwnProperty(key)) {
-                //       this[key] = response?.data?.forecast[key];
-                //     // }
-                //   });
-                // this.temp_c = response?.data?.current?.temp_c
             })
         }
         catch (e) {
