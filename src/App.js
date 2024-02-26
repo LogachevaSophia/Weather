@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import apiStore from "./Store/ApiStore.tsx"
 import CurrentWeather from './components/CurrentWeater/CurrentWeather.tsx';
 import CurrentThree from './components/CurrentWeatherThreeJs/CurrentWeatherThreeJs.tsx';
+import CurrentWeatherNew from './components/CurrentWeatherNew/CurrentWeatherNew.tsx';
 
 function App() {
   // useEffect(()=>{
@@ -11,7 +12,8 @@ function App() {
   // },[])
   return (
     <div className="App">
-      <CurrentWeather/>
+      <CurrentWeatherNew/>
+      {/* <CurrentWeather/> */}
       <CurrentThree/>
     </div>
   );

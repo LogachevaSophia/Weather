@@ -10,6 +10,8 @@ interface Day {
     mintemp_c: number,
     icon: string,
     text: string,
+    hour: [],
+    daily_chance_of_rain: number
 }
 
 
@@ -50,14 +52,17 @@ export class CurrentWeatherStore {
                     let day:Day = response?.data?.forecast?.forecastday[i]
                     this.forecast.push(
                         {
-                            date: moment(day?.date).format("MM/DD/YYYY"),
+                            date: moment(day?.date).format("DD"),
                             avgtemp_c: day?.day?.avgtemp_c,
                             icon: day?.day?.condition?.icon,
                             text: day?.day?.condition?.text,
                             maxtemp_c: day?.day?.maxtemp_c,
-                            mintemp_c:day?.day?.mintemp_c
+                            mintemp_c:day?.day?.mintemp_c,
+                            hour: day?.hour,
+                            daily_chance_of_rain: day?.day?.daily_chance_of_rain
 
                         })
+                    // console.log(this.forecast)
 
                 }
                 console.log("я закончил")

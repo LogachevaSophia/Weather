@@ -12,19 +12,37 @@ const CurrentWeather = observer((props) => {
         currentWeatherStore.getForecastWeather()
     }, [])
     useEffect(() => {
-        console.log(currentWeatherStore?.forecast)
+        // console.log(currentWeatherStore?.forecast)
         // apiStore.getCurrentWeather()
     }, [currentWeatherStore?.forecast])
     return (
         <div className="form">
 
-            <label>
+            {/* <label>
                 Current Weather
-            </label>
+            </label> */}
             <br></br>
-            <span className="degree">
-                {currentWeatherStore.temp_c}°C
-            </span>
+            <div >
+                <span className="degree alignleft">{currentWeatherStore.temp_c}°C</span>
+               
+                <span className="opacityWhite  width alignleft">feels like {currentWeatherStore.feelslike_c}</span>
+                
+            </div>
+            <div className="location opacityWhite">
+                
+                <span>
+                    Saint-Peterburg
+                </span>
+
+                <span className="material-symbols-outlined">
+                    near_me
+                </span>
+            </div>
+            <div className="now opacityWhite alignleft">
+                <span>Now</span>
+
+            </div>
+
 
             {/* <br></br> */}
             <div className="slider">
@@ -34,13 +52,13 @@ const CurrentWeather = observer((props) => {
                             {el?.text}
                         </span>
                         <img src={`https:${el?.icon}`}></img>
-                        <span>
+                        <span className="date">
                             {String(el?.date)}
                         </span>
                     </div>)
                 })}
 
-              
+
             </div>
         </div>
     )
