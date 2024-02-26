@@ -4,6 +4,7 @@ This is an application for obtaining weather data in St. Petersburg
 
 ## PublishPages
 https://logachevasophia.github.io/Weather/build_weather/build/
+
 https://logachevasophia.github.io/Weather/build_cube/build/
 
 ## Aboutthis Service
