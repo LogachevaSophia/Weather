@@ -1,13 +1,12 @@
 import { observer } from "mobx-react-lite";
 import React, { useEffect } from "react";
-import apiStore from "../../Store/ApiStore.tsx";
 import "./CurrentWeather.css"
 import { currentWeatherStore } from "../CurrentWeater/CurrentWeatherStore.tsx";
 import moment from "moment";
 
 
 
-const CurrentWeatherNew = observer((props) => {
+const CurrentWeather = observer((props) => {
     useEffect(() => {
         currentWeatherStore.getCurrentWeather()
         currentWeatherStore.getForecastWeather()
@@ -93,4 +92,4 @@ const CurrentWeatherNew = observer((props) => {
     )
 })
 
-export default CurrentWeatherNew
+export default CurrentWeather

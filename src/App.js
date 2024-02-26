@@ -1,20 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { useEffect } from 'react';
-import apiStore from "./Store/ApiStore.tsx"
-import CurrentWeather from './components/CurrentWeater/CurrentWeather.tsx';
-import CurrentThree from './components/CurrentWeatherThreeJs/CurrentWeatherThreeJs.tsx';
-import CurrentWeatherNew from './components/CurrentWeatherNew/CurrentWeatherNew.tsx';
+
+import CurrentThree from './components/CurrentWeatherThreeJs/CurrentWeatherThreeNew.tsx';
+
+import { Routes, Route} from 'react-router-dom';
+import CurrentWeather from './components/CurrentWeater/CurrentWeatherNew.tsx';
 
 function App() {
-  // useEffect(()=>{
-  //   apiStore.getCurrentWeather()
-  // },[])
   return (
     <div className="App">
-      <CurrentWeatherNew/>
-      {/* <CurrentWeather/> */}
-      <CurrentThree/>
+      <Routes>
+        <Route path="/" element={<CurrentWeather />} />
+        <Route path="/cube" element={<CurrentThree />} />
+      </Routes>
     </div>
   );
 }

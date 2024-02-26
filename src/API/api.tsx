@@ -14,10 +14,4 @@ instance.interceptors.request.use(function (config) {
     return config;
   });
 
-// instance.interceptors.request.use(config => {
-//   const access_token = localStorage.getItem("token");;
-//   config.headers.Authorization = `Bearer ${access_token}`;
-//   return config;
-// });
-
 export default instance;

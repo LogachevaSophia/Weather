@@ -62,10 +62,11 @@ export class CurrentWeatherStore {
                             daily_chance_of_rain: day?.day?.daily_chance_of_rain
 
                         })
-                    // console.log(this.forecast)
+                    
 
                 }
                 console.log("я закончил")
+                console.log(this.forecast)
                 // Object.keys(response?.data?.forecast).forEach((key) => {
                 //     // if (this.hasOwnProperty(key)) {
                 //       this[key] = response?.data?.forecast[key];

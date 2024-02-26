@@ -1,66 +1,70 @@
-/* .alignleft{
+.bigfont{
+    font-size: 3rem
+}
+.textAlignLeft{
     text-align: left;
 }
-.width{
-    display: block;
-    width: 100%
+.opacitycolor{
+    color: rgba(255, 255, 255, 0.7)
 }
 
-
-.form{
-    background-color: rgba(255, 255, 255, 0.4);
-    width: min-content;
-    border-radius: 20px;
-    padding: 20px 50px;
-    width: 534px;
-    overflow: hidden;
-
+.container .header{
+  display: grid;
+  grid-template-columns: auto auto; /* Два столбца */
+  grid-template-rows: auto auto; /* Две строки */
+  gap: 10px; /* Пространство между элементами */
+  padding: 0 10%;
+}
+.container .degree{
+    grid-column: 1 / 2; /* Занимает первый столбец */
+    grid-row: 1 / 2; /* Занимает первую строку */
+}
+.container img{
+    grid-column: 2 / 3; /* Занимает второй столбец */
+    grid-row: 1 / 3; /* Занимает две строки */
+}
+.container .location{
+    grid-column: 1 / 2; /* Занимает первый столбец */
+    grid-row: 2 / 3; /* Занимает вторую строку */
+   
 }
 
-.form .location, .form .now{
-
-    width: 100%;
-    display: block;
-    
-}
-
-.form .location{
+.container .location > div{
     display: flex;
     align-items: center;
     gap:5px
 }
-.form .degree{
-    font-size: 3rem;
-    margin-bottom: 20px;
+.container .location > span{
     width: 100%;
     display: block;
-}
 
-.form .icons{
+}
+.container{
+    overflow: hidden;
+    width: 80%
+}
+.container .body{
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    width: min-content;
-    font-size: 0.8rem;
-
+    align-items: center;
 }
-.form .icons > img{
-   max-width: 100px;
-   max-width: 100px;
-   min-width: 40px;
-
-}
-.form .slider{
-    display:  flex;
-    flex-direction: row;
-    gap: 10px;
+.container .body .hours{
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    overflow: hidden;
     overflow-x: auto;
-    overflow-y: hidden;
-    margin: 31px 0;
-    padding: 10px;
+    margin-bottom: 50px;
 }
-.form .slider .icons .text{
-    min-height: 20%;
+.container .body .forecast .row{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
-.form .slider .icons .date{
-    min-height: 33%;
-} */
+.container .body .forecast .row >span{
+    min-width: 20px
+}
+.container .body .forecast .row >span:first-child{
+    margin-right: 20px;
+}
