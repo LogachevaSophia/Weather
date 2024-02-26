@@ -9,6 +9,7 @@ import CurrentWeather from './components/CurrentWeater/CurrentWeather.tsx';
 function App() {
   return (
     <div className="App">
+   
       <Routes>
         <Route path="/" element={<CurrentWeather />} />
         <Route path="/cube" element={<CurrentThree />} />
